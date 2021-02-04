@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST TEST JQUERY</title>
+</head>
+
+<body>
+    <h1 id="title"></h1>
+    <section class="section1">
+        <button id="btn">click me to delete</button>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi libero, ullam omnis suscipit adipisci
+            corrupti sunt eum doloribus laudantium nostrum? Laudantium alias sit, voluptatum recusandae illo dolorem
+            beatae quo laborum!</p>
+        <button id="btn-1">click me to hide and show</button>
+        <p id="test">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci numquam porro distinctio,
+            reiciendis placeat et quos quo consectetur quia animi veniam nostrum maiores, laboriosam eos excepturi eum
+            laudantium officiis dignissimos?</p>
+    </section>
+    <section class="section2">
+        <button id="btn-2">click me to close</button>
+        <button id="btn-3">click me to open</button>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate molestias provident accusantium dolores
+            eveniet illo libero tenetur. Eos voluptatem nemo et repellat, quidem, soluta odio magnam libero impedit
+            molestias ad.</p>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // add text
+            $(`#title`).html(`Halo dunia!`);
+
+            // fade in
+            $("#btn").click(function () {
+                $(`#p1`).fadeOut("slow");
+            });
+
+            // toggle button
+            $(`#btn-1`).click(function () {
+                $(`#test`).slideToggle('slow');
+            });
+
+            // hide and show
+            $(`#btn-2`).click(function () {
+                $(`.section2 p`).hide();
+            });
+
+            $(`#btn-3`).click(function () {
+                $(`.section2 p`).show();
+            });
+        });
+    </script>
+</body>
+
+</html>
